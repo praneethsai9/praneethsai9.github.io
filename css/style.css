@@ -1,0 +1,145 @@
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #f5f7fa;
+    color: #333;
+    margin: 30px;
+    padding: 0;
+    text-align: center;
+    font-weight: 300; /* Adjusted to non-bold */
+}
+
+header {
+    background-color: #e6e9ef;
+    padding: 20px;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 100;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 20px;
+}
+
+nav ul li a {
+    color: #333;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+section {
+    padding: 40px 20px;
+    margin-top: 30px;
+}
+
+#home {
+    height: 50vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: url('images/bg.jpg') no-repeat center center;
+    background-size: cover;
+}
+
+#name {
+    font-size: 3em;
+    color: #007bff;
+    animation: typing 2s steps(22), blink 0.5s step-end infinite alternate;
+    white-space: nowrap;
+    overflow: hidden;
+    border-right: 2px solid;
+}
+
+#tagline {
+    font-size: 1.5em;
+    color: #555;
+    margin-bottom: 10px; /* Reduced space */
+}
+
+#About_Me {
+    font-size: 1.5em;
+    color: #555;
+    margin-bottom: 10px; /* Reduced space */
+}
+.container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.work-item, .project-item {
+    width: 30%;
+    margin: 20px 0;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.work-item:hover, .project-item:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.work-item a, .project-item a {
+    text-decoration: none;
+    color: #007bff;
+    font-weight: 500; /* Slightly bold for headings */
+}
+
+h2 {
+    color: #007bff;
+}
+
+.bubble-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    margin: 20px 0;
+}
+
+.bubble {
+    background-color: #007bff;
+    color: #fff;
+    border-radius: 20px;
+    padding: 10px 15px;
+    margin: 10px;
+    display: inline-block;
+    font-size: 16px;
+    justify-content: center;
+    align-items: center;
+}
+
+.social-icons {
+    margin-top: 20px;
+}
+
+.social-icons img {
+    width: 30px;
+    margin: 0 10px;
+    transition: transform 0.3s;
+}
+
+.social-icons img:hover {
+    transform: scale(1.2);
+}
+
+@keyframes typing {
+    from { width: 0; }
+    to { width: 100%; }
+}
+
+@keyframes blink {
+    50% { border-color: transparent; }
+}
