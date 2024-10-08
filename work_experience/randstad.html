@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Randstad Enterprise</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            padding: 20px;
+        }
+        section {
+            margin-bottom: 30px;
+            text-align: left; /* Ensures all text in the section aligns to the left */
+        }
+        h2 {
+            color: #007bff;
+        }
+        h3, h4 {
+            color: #333;
+            margin-top: 20px;
+        }
+        ul {
+            margin: 10px 0;
+        }
+        li {
+            margin: 5px 0;
+        }
+        p {
+            text-align: left; /* Ensures paragraphs align to the left */
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="../index.html">Back to Home</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section>
+        <h2>Randstad Enterprise</h2>
+        <p>Data Engineer | July 2022 - Present</p>
+            <h1><strong>Projects:</strong></h1>
+            <h4>SCOPE (Solution for Cloud and Orchestration Process Engine)</h4>
+            <ul>
+                <li>Integrating API’s of ATS/ VMS systems (Workday, SuccessFactors, Beeline, Planday, GR8 People,
+                    SmartRecruiters etc.) and connecting client databases and buckets to extract hiring and workforce
+                    data that clients generate and configuring pipelines to ensure each client’s specific requirements are
+                    met.
+                    </li>
+                <li>Implemented delta load filtering code to process only new data in the daily loads,and appending it to
+                    the source data.</li>
+                <li>Added safe exit mechanisms to ensure clean exit points in case of pipeline failures, preventing partial
+                    or corrupted data from entering final tables.
+                    </li>
+                <li>Configured tool to execute the data loads for different source reports in parallel by using
+                    concurrent.features library also implemented decryption of encrypted files.
+                    </li>
+                <li>Created and managed workloads using Google Kubernetes Engine (GKE) for deploying and
+                    scheduling workloads to run at specific times depending on the clients and teams.</li>
+                <li>Developed a CI/CD pipeline using GitHub Actions, Cloud Build triggers and Kubernetes, automating
+                    code deployment and streamlining release management.
+                    </li>
+                <li> Used Google’s Cloud SQL and cloud storage and BigQuery connectors and libraries.Implemented IAM
+                    policies and used secret manager to store and fetch credentials.
+                    </li>
+                <li>Designed and implemented ETL pipelines with distinct staging (STG) and standardization (STD) layers
+                    to ensure data accuracy and consistency
+                    <ul>
+                        <li>The STG layer pre-processes and validates data by filtering out corrupted records,removing null
+                            values,deduplication and in delta loads, preventing existing records to stop from ingestion and
+                            preparing it for further transformation.</li>
+                        <li>The STD layer appends the data with company-standard fields, ensuring compliance with
+                            organizational requirements for reporting and internal billing.
+                            </li>
+                    </ul>
+                    </li>
+                <li>Modified the tool to support streaming inserts for bulk loads and using temporary tables to handle
+                    connection failures to the database and modified the code base with proper returns and generators to
+                    support sequential execution of stages and database transactions.
+                    </li>
+                <li>Added features to ingest all types of files with extensions - parquet, csv, xlsx and encryptions like pgp.
+                    For altering data types added code to use a table to assign data types for raw-data.</li>
+            </ul>
+    
+            <h3>Data Migrations</h3>
+            <ul>
+                <li>Migrated data from PostgreSQL to BigQuery, utilizing partitioning and clustering strategies in
+                    BigQuery when needed, to improve query performance.
+                    </li>
+                <li>Wrote custom SQL and Python scripts to facilitate data migration and used scheduled queries to update
+                    mapping tables present in different projects.
+                    </li>
+            </ul>
+    
+            <h3>Client Implementations</h3>
+            <ul>
+                <li>Met with Business Analysts/Partners on a regular basis to facilitate and provide required data for their
+                    business intelligence and billing purposes.
+                    </li>
+                <li>As part of client implementations, created views and tables that have pivoted data with source data and
+                    joins with other mapping tables to ensure that the hire / requisition / candidates have all the fields that
+                    are expected by business.
+                    </li>
+            </ul>
+    
+            <h3>Data Quality Management using SODA</h3>
+            <ul>
+                <li>Using SODA a data quality checking library and tool, I was part of testing the tool to validate the
+                    quality checks and metrics
+                    </li>
+                <li> A standalone project that is deployed in kubernetes is created to run soda checks on all the bigquery
+                    datasets for quality.</li>
+            </ul>
+    
+            <h3>Talent Marketing</h3>
+            <ul>
+                <li> The siloed data that is present in various randstad’s entities are used to make a dashboard that can
+                    provide insights and decision making in programmatic advertising of jobs and email campaigning to
+                    reach out to candidates.
+                    </li>
+                <li> Used Dataform for managing SQL workflows, transformations and dataform’s release management
+                    and workflow executions.</li>
+            </ul>
+    
+            <h3>Standardization and Consolidation</h3>
+            <ul>
+                <li>Was part of the architecture consideration for the standardization of data across all clients to improve
+                    process efficiency and to use the consolidated data for internal AI applications.
+                    </li>
+                <li>Anonymize/mask fields when consolidating datasets across clients. Created query templates and
+                    dynamic queries to generate standardized reports for every client source data.
+                    </li>
+            </ul>
+    
+            <h3>Alerting and Incident Management</h3>
+            <ul>
+                <li>Was part of developing an alerting system using ServiceNow SnowAPI to send mail alerts for the
+                    Delivery and Data Engineering teams in case of production failures.
+                    </li>
+                <li>Used google-cloud-logging library to generate logs for workloads and used cloud monitoring to check
+                    metrics for pods and cloud sql instances.</li>
+            </ul>
+    
+            <p><strong>Technologies Used:</strong>: BigQuery, GCP, Python (Pandas, NumPy, Polars), concurrent.futures, Spark, Dataform,
+                Dataflow, Composer, Airflow, Kubernetes, GitHub Actions, GKE, S3, GCS, Pub/Sub, API’s.</p>
+    </section>
+</body>
+</html>
